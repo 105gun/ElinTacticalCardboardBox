@@ -21,7 +21,7 @@ public enum CardboardBoxLogLevel
 [BepInPlugin("105gun.cardboardbox.mod", "Tactical Cardboard Box", "1.0.0.0")]
 public class Plugin : BaseUnityPlugin
 {
-    static CardboardBoxLogLevel pluginLogLevel = CardboardBoxLogLevel.Debug;
+    static CardboardBoxLogLevel pluginLogLevel = CardboardBoxLogLevel.Info;
     public static string ridePCC = "cardboardbox";
     private void Start()
     {
@@ -89,7 +89,7 @@ public class Plugin : BaseUnityPlugin
 
 // ActRide.Perform
 [HarmonyPatch(typeof(ActRide))]
-public class PerformPatch
+public class ActRidePatch
 {
     static int originShowRideValue = 2;
 

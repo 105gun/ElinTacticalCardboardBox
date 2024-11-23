@@ -3,6 +3,18 @@
 	<id>tactical_cardboard_box</id>
 	<author>105gun</author>
 	<loadPriority>100</loadPriority>
-    <description>Remove some underage check in succubus character.\n移除了魅魔角色的年龄检查。</description>
+    <description>[img]https://s2.loli.net/2024/11/23/el2JRdyTcNFDung.gif[/img]
+
+[h2] Riding cardboard box[/h2]
+This mod allows you to [b]Ride[/b] an empty cardboard box, which giving you 40 extra Stealth, and making you feel like Snake.
+
+[img]https://s2.loli.net/2024/11/23/CXaG48JTHr7Ohoe.gif[/img]
+
+[h2] Fast travel [/h2]
+When you are riding on a cardboard box, click [b]Ride[/b] again on a delivery box. The effect is equivalent to Return.
+(A 25$ bill will be sent later)
+
+[h2] Uninstallation [/h2]
+Remove the cardboard box before uninstalling.</description>
 	<version>0.23.32</version>
 </Meta>
