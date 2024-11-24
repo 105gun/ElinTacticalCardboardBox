@@ -79,7 +79,7 @@ public class Plugin : BaseUnityPlugin
 
     public static bool IsCardboardBox(Card card)
     {
-        if (card.c_idRidePCC == ridePCC && card.id == "boxchicken") // Yes, the cardboard box is a chicken
+        if (card.c_idRidePCC != null && card.c_idRidePCC == ridePCC && card.id == "boxchicken") // Yes, the cardboard box is a chicken
         {
             return true;
         }
@@ -214,7 +214,7 @@ public class ActRidePatch
     [HarmonyPatch(nameof(ActRide.Ride))]
     static bool RidePrefix(Chara host, Chara t, bool parasite)
     {
-        if (Plugin.IsCardboardBox(t) && !parasite)
+        if (!parasite && Plugin.IsCardboardBox(t))
         {
             Plugin.ModLog("Riding cardboard box", CardboardBoxLogLevel.Debug);
 
@@ -252,7 +252,7 @@ public class ActRidePatch
     [HarmonyPatch(nameof(ActRide.Unride))]
     static bool UnridePrefix(Chara host, bool parasite)
     {
-        if (Plugin.IsCardboardBox(host.ride) && !parasite)
+        if (!parasite && Plugin.IsCardboardBox(host.ride))
         {
             Plugin.ModLog("Unriding cardboard box", CardboardBoxLogLevel.Debug);
             Msg.SayRaw("You get out of cardboard box... ");
