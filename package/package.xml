@@ -3,7 +3,8 @@
 	<id>tactical_cardboard_box</id>
 	<author>105gun</author>
 	<loadPriority>100</loadPriority>
-    <description>[img]https://s2.loli.net/2024/11/23/el2JRdyTcNFDung.gif[/img]
+    <description>[h1] Cardboard box [/h1]
+[img]https://s2.loli.net/2024/11/23/el2JRdyTcNFDung.gif[/img]
 
 [h2] Riding cardboard box[/h2]
 This mod allows you to [b]Ride[/b] an empty cardboard box, which giving you 40 extra Stealth, and making you feel like Snake.
@@ -14,7 +15,20 @@ This mod allows you to [b]Ride[/b] an empty cardboard box, which giving you 40 e
 When you are riding on a cardboard box, click [b]Ride[/b] again on a delivery box. The effect is equivalent to Return.
 (A 25$ bill will be sent later)
 
-[h2] Uninstallation [/h2]
-Remove the cardboard box before uninstalling.</description>
+[h1] New ability: CQC [/h2]
+[img]https://s2.loli.net/2024/11/28/UtG71XumlTZ5Jf9.png[/img]
+You can learn CQC techniques in Thieves Guild. It can be used to kidnap NPCs.
+
+[img]https://s2.loli.net/2024/11/28/mKF4yeCp3au95nj.gif[/img]
+[h2] Use CQC to knock down targets [/h2]
+Use CQC ability on an [b]awakened[/b] NPC to knock them down and make them sleep. The success rate is related to the target's PER and your Martial Art and STR.
+
+[h2] Then kidnap them with Fulton system [/h2]
+Use CQC ability on a [b]sleeping[/b] NPC again to kidnap them. A device known as the Fulton Surface-to-Air Recovery System will launch and send NPCs back to your territory.
+It takes a certain amount of time to install, and your action will be interrupted by being spotted. The speed of installation depends on target's LV and your Pickpocket.
+(For obvious reasons, you should not use it indoor...)
+
+[h1] Uninstallation [/h1]
+Unride the cardboard box before uninstalling.</description>
 	<version>0.23.32</version>
 </Meta>

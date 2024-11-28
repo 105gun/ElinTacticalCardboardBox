@@ -34,3 +34,14 @@ class CreateRowPatch
         }
     }
 }
+
+/*
+// SourceElement.CreateRow
+[HarmonyPatch(typeof(SourceElement), nameof(SourceElement.CreateRow))]
+class CreateElementPatch
+{
+    static void Postfix(SourceElement __instance, ref SourceElement.Row __result)
+    {
+        Plugin.ModLog($"CreateElementPatch.Postfix {__result.id}", CardboardBoxLogLevel.Error);
+    }
+}*/

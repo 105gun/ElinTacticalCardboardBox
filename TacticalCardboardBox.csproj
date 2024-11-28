@@ -33,6 +33,9 @@
     <Reference Include="Elin">
       <HintPath>$(ManagedPath)/Elin.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>$(ManagedPath)/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="BepInEx.Core">
       <HintPath>$(BepInExPath)/core/BepInEx.Core.dll</HintPath>
     </Reference>
