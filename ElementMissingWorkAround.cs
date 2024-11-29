@@ -35,7 +35,7 @@ class GameSavePatch
 
     static void Postfix(Game __instance)
     {
-        if (EClass.player == null || EClass.player.chara == null)
+        if (EClass.core == null || EClass.core.game == null || EClass.player == null || EClass.player.chara == null)
         {
             // Save when quitting to main menu
             return;
