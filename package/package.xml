@@ -21,14 +21,14 @@ You can learn CQC techniques in Thieves Guild. It can be used to kidnap NPCs.
 
 [img]https://s2.loli.net/2024/11/28/mKF4yeCp3au95nj.gif[/img]
 [h2] Use CQC to knock down targets [/h2]
-Use CQC ability on an [b]awakened[/b] NPC to knock them down and make them sleep. The success rate is related to the target's PER and your Martial Art and STR.
+Use CQC ability on an [b]Awakened[/b] NPC to knock them down and make them sleep. The success rate is related to the target's PER and your Martial Art and STR.
 
 [h2] Then kidnap them with Fulton system [/h2]
-Use CQC ability on a [b]sleeping[/b] NPC again to kidnap them. A device known as the Fulton Surface-to-Air Recovery System will launch and send NPCs back to your territory.
+Use CQC again on [b]Sleepy[/b] NPCs to kidnap them. The Fulton Surface-to-Air Recovery System will send them to high altitude to be recovered by your companions (in some way). Successfully recovered NPCs become members of your territory.
 It takes a certain amount of time to install, and your action will be interrupted by being spotted. The speed of installation depends on target's LV and your Pickpocket.
-(For obvious reasons, you should not use it indoor...)
+(And...For obvious reasons, you should not use it indoor...)
 
 [h1] Uninstallation [/h1]
 Unride the cardboard box before uninstalling.</description>
-	<version>0.23.32</version>
+	<version>0.23.54</version>
 </Meta>

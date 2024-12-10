@@ -18,7 +18,7 @@ public enum CardboardBoxLogLevel
     Debug
 };
 
-[BepInPlugin("105gun.cardboardbox.mod", "Tactical Cardboard Box", "1.1.0.0")]
+[BepInPlugin("105gun.cardboardbox.mod", "Tactical Cardboard Box", "1.1.1.0")]
 public class Plugin : BaseUnityPlugin
 {
     static CardboardBoxLogLevel pluginLogLevel = CardboardBoxLogLevel.Info;
