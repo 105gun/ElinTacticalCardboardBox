@@ -89,7 +89,7 @@ public class AI_CQC : AI_TargetCard
 
         if (EClass.rnd(4) == 0)
         {
-            chara.SayRaw("Hey, what?");
+            chara.SayRaw("TCB_CQC_0".lang());
         }
 
         DOTween.To(() => chara.renderer.position.y, delegate(float x)
@@ -100,7 +100,7 @@ public class AI_CQC : AI_TargetCard
         chara.PlaySound("custom_MGSBallon", 1f, true);
         yield return new WaitForSecondsRealtime(0.2f);
         
-        chara.SayRaw("AAAAAAAaaaaaaaaaaaaaaaa");
+        chara.SayRaw("TCB_CQC_1".lang());
         DOTween.To(() => chara.renderer.position.y, delegate(float x)
         {
             chara.renderer.position = new Vector3(chara.renderer.position.x + UnityEngine.Random.Range(-0.1f, 0.1f), x, chara.renderer.position.z);
@@ -121,7 +121,7 @@ public class AI_CQC : AI_TargetCard
             {
                 // Poor guy...
 			    Msg.SetColor("negative");
-                Msg.SayRaw($"{chara.Name} hit the rood and smashed into pieces... R.I.P ");
+                Msg.SayRaw(String.Format( "TCB_CQC_2".lang(), chara.Name));
                 chara.AddBlood(20);
                 chara.Die(); // R.I.P
             }
@@ -130,7 +130,7 @@ public class AI_CQC : AI_TargetCard
                 // Move to home branch
                 EClass._zone.RemoveCard(chara);
 			    Msg.SetColor("positive");
-                Msg.SayRaw($"{chara.Name} hit through the roof! ");
+                Msg.SayRaw(String.Format( "TCB_CQC_3".lang(), chara.Name));
                 chara._MakeAlly();
                 EClass.pc.Say("hire", chara, null, null);
                 EClass.Sound.Play("custom_MGSTeleport");
@@ -143,7 +143,7 @@ public class AI_CQC : AI_TargetCard
             // Move to home branch
             EClass._zone.RemoveCard(chara);
 			Msg.SetColor("positive");
-            Msg.SayRaw($"{chara.Name} fly away! ");
+            Msg.SayRaw(String.Format( "TCB_CQC_4".lang(), chara.Name));
             chara._MakeAlly();
             EClass.pc.Say("hire", chara, null, null);
             EClass.Sound.Play("custom_MGSTeleport");
@@ -163,11 +163,11 @@ public class AI_CQC : AI_TargetCard
             if (chara.HasCondition<ConSleep>())
             {
                 // Fulton actions
-                Msg.SayRaw($"Applying Fulton recovery system on {chara.Name}. ");
+                Msg.SayRaw(String.Format( "TCB_CQC_5".lang(), chara.Name));
                 if (chara.Cell.HasRoof || EClass._map.IsIndoor)
                 {
 			        Msg.SetColor("ono");
-                    Msg.SayRaw($"It's dangerous to use Fulton indoor... ");
+                    Msg.SayRaw("TCB_CQC_6".lang());
                 }
                 this.owner.PlaySound("custom_MGSSelectItem", 1f, true);
                 int skill = this.owner.HasElement(281) ? this.owner.Evalue(281) : 1;
@@ -235,7 +235,7 @@ public class AI_CQC : AI_TargetCard
                 {
                     // Success
 			        Msg.SetColor("positive");
-                    Msg.SayRaw($"You knocked {chara.Name} unconscious... ");
+                    Msg.SayRaw(String.Format( "TCB_CQC_7".lang(), chara.Name));
                     chara.AddCondition<ConSleep>(300 + 10 * EClass.rnd(this.owner.STR), force: true);
                     this.owner.ModExp(100, 75);
                     this.owner.pos.TryWitnessCrime(owner, chara, 3, funcWitness);
@@ -248,7 +248,7 @@ public class AI_CQC : AI_TargetCard
                 {
                     // Fail
 			        Msg.SetColor("negative");
-                    Msg.SayRaw($"{chara.Name} dodged your attack! ");
+                    Msg.SayRaw(String.Format( "TCB_CQC_8".lang(), chara.Name));
                     chara.DoHostileAction(this.owner, false);
                     EClass.player.ModKarma(-1);
                     this.owner.ModExp(100, 25);

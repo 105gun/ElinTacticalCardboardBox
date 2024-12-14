@@ -80,6 +80,9 @@ public class ActRidePatch
     {
         // Check deliver chest first
         List<Card> deliverList = Act.TP.ListThings<TraitDeliveryChest>(true);
+        List<Card> containerList = Act.TP.ListThings<TraitContainer>(false);
+        bool errorAudioPlayed = false;
+
         if (deliverList.Count > 0 && Plugin.IsUsingCardboardBox(Act.CC))
         {
             DeliverChestTeleport();
@@ -92,10 +95,8 @@ public class ActRidePatch
             return true;
         }
 
-        List<Card> list = Act.TP.ListThings<TraitContainer>(false);
-        bool errorAudioPlayed = false;
         // If there is a cardboard box in this location, check it first
-        foreach (Card card in list)
+        foreach (Card card in containerList)
         {
             if (card.id == "cardboard_box")
             {
@@ -107,7 +108,7 @@ public class ActRidePatch
                         EClass.pc.PlaySound("custom_MGSError", 1f, true);
                     }
 			        Msg.SetColor("negative");
-                    Msg.SayRaw($"You can only hide in empty cardboard box... ");
+                    Msg.SayRaw("TCB_box_0".lang());
                     continue;
                 }
 
@@ -150,7 +151,7 @@ public class ActRidePatch
 			{
 				ActRide.Unride(host, false);
 			}
-            Msg.SayRaw("You hide in a cardboard box... ");
+            Msg.SayRaw("TCB_box_1".lang());
             
 			host.ride = t;
             if (!t.IsPCFaction)
@@ -186,7 +187,7 @@ public class ActRidePatch
         if (!parasite && Plugin.IsCardboardBox(host.ride))
         {
             Plugin.ModLog("Unriding cardboard box", CardboardBoxLogLevel.Debug);
-            Msg.SayRaw("You get out of cardboard box... ");
+            Msg.SayRaw("TCB_box_2".lang());
 
             // Restore the original value of showRide
             EClass.core.config.game.showRide = originShowRideValue;

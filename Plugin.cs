@@ -18,7 +18,7 @@ public enum CardboardBoxLogLevel
     Debug
 };
 
-[BepInPlugin("105gun.cardboardbox.mod", "Tactical Cardboard Box", "1.1.2.0")]
+[BepInPlugin("105gun.cardboardbox.mod", "Tactical Cardboard Box", "1.2.0.0")]
 public class Plugin : BaseUnityPlugin
 {
     static CardboardBoxLogLevel pluginLogLevel = CardboardBoxLogLevel.Info;
@@ -37,11 +37,6 @@ public class Plugin : BaseUnityPlugin
     private void LoadData()
     {
 		var dir = Path.GetDirectoryName(Info.Location);
-		var excel = dir + "/Data/SourceCard.xlsx";
-		var sources = Core.Instance.sources;
-		ModUtil.ImportExcel(excel, "Chara", sources.charas);
-		ModUtil.ImportExcel(excel, "CharaText", sources.charaText);
-		ModUtil.ImportExcel(excel, "Element", sources.elements);
 
         ClassCache.caches.Create<AI_CQC>("CardboardBoxMod.AI_CQC", "ElinTacticalCardboardBox");
 
